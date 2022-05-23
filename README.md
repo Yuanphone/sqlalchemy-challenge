@@ -118,14 +118,14 @@ Use the peak-to-peak (TMAX-TMIN) value as the y error bar (YERR).
 
   ![tripavgplot](https://user-images.githubusercontent.com/100816322/169883113-99a32733-47b4-4c2c-95c5-f1300d576341.png)
 
-Daily Rainfall Average
+#### Daily Rainfall Average
 We also need to know what the rainfal has been. The following steps were completed:
 
 Calculate the rainfall per weather station using the previous year's matching dates.
 
 Sort this in descending order by precipitation amount, and list the station, name, latitude, longitude, and elevation.
 
-Daily Temperature Normals
+##3 Daily Temperature Normals
 Calculate the daily normals for the duration of the trip. Normals are the averages for the minimum, average, and maximum temperatures.
 You are provided with a function called daily_normals that will calculate the daily normals for a specific date. This date string will be in the format %m-%d. Make sure to use all historic TOBS that match that date string.
 
