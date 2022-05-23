@@ -98,9 +98,9 @@ When given the start and the end date, calculate the TMIN, TAVG, and TMAX for da
   Identify the average temperature in June at all stations across all available years in the dataset. Do the same for the temperature in December.
 Use the t-test to determine whether the difference in means, if any, is statistically significant. Will you use a paired t-test or an unpaired t-test? Why?
 
-The t test tells you how significant the differences between group means are. It lets you know if those differences in means could have happened by chance. A paired t-test is designed to compare the means of the same group or item under two separate scenarios. An unpaired t-test compares the means of two independent or unrelated groups.
+##### The t test tells you how significant the differences between group means are. It lets you know if those differences in means could have happened by chance. A paired t-test is designed to compare the means of the same group or item under two separate scenarios. An unpaired t-test compares the means of two independent or unrelated groups.
   
-In this analysis, unpaired t-test is used because the means of two independent groups are compared. The temprature in June and December are the data of two independent groups. The pvalue of 3.90 is higher than 0.05, and indicated the result is non-significant.
+##### In this analysis, unpaired t-test is used because the means of two independent groups are compared. The temprature in June and December are the data of two independent groups. The pvalue of 3.90 is higher than 0.05, and indicated the result is non-significant.
 
 #### Temperature Analysis 2
 
