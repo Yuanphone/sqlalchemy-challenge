@@ -58,6 +58,7 @@ In this section, a Flask API was designed based on the queries that you have jus
 Use Flask to create your routes, as follows:
 
 Homepage: List all available routes.
+
 <img width="285" alt="homepage" src="https://user-images.githubusercontent.com/100816322/169882312-1219d266-818e-4a6f-81fd-a0386d8e5ba5.PNG">
 
 /api/v1.0/precipitation
@@ -76,25 +77,36 @@ Return a JSON list of temperature observations (TOBS) for the previous year.
 Return a JSON list of the minimum temperature, the average temperature, and the maximum temperature for a given start or start-end range.
 When given the start only, calculate TMIN, TAVG, and TMAX for all dates greater than or equal to the start date.
 When given the start and the end date, calculate the TMIN, TAVG, and TMAX for dates from the start date through the end date (inclusive).
+
 ### Bonus: Other Recommended Analyses
-Use the provided temp_analysis_bonus_1_starter.ipynb and temp_analysis_bonus_2_starter.ipynb starter notebooks for their respective bonus challenge.
+
+  Use the provided temp_analysis_bonus_1_starter.ipynb and temp_analysis_bonus_2_starter.ipynb starter notebooks for their respective bonus challenge.
 
 
 #### Temperature Analysis 1
-Conduct an analysis to answer the following question: Hawaii is reputed to enjoy mild weather all year round. Is there a meaningful difference between the temperatures in, for example, June and December?
-Use Pandas to perform the following steps:
-Convert the date column format from string to datetime.
-Set the date column as the DataFrame index.
-Drop the date column.
-Identify the average temperature in June at all stations across all available years in the dataset. Do the same for the temperature in December.
+
+  Conduct an analysis to answer the following question: Hawaii is reputed to enjoy mild weather all year round. Is there a meaningful difference between the temperatures in, for example, June and December?
+
+  Use Pandas to perform the following steps:
+
+ Convert the date column format from string to datetime.
+
+ Set the date column as the DataFrame index.
+
+  Drop the date column.
+
+  Identify the average temperature in June at all stations across all available years in the dataset. Do the same for the temperature in December.
 Use the t-test to determine whether the difference in means, if any, is statistically significant. Will you use a paired t-test or an unpaired t-test? Why?
 
-  The t test tells you how significant the differences between group means are. It lets you know if those differences in means could have happened by chance. A paired t-test is designed to compare the means of the same group or item under two separate scenarios. An unpaired t-test compares the means of two independent or unrelated groups.
+The t test tells you how significant the differences between group means are. It lets you know if those differences in means could have happened by chance. A paired t-test is designed to compare the means of the same group or item under two separate scenarios. An unpaired t-test compares the means of two independent or unrelated groups.
+  
 In this analysis, unpaired t-test is used because the means of two independent groups are compared. The temprature in June and December are the data of two independent groups. The pvalue of 3.90 is higher than 0.05, and indicated the result is non-significant.
 
 #### Temperature Analysis 2
+
 Using historical data in the dataset, find out what the temperature has previously been from August 1 to August 7.
 Note: The starter notebook contains a function called calc_temps that will accept a start date and end date in the format %Y-%m-%d. The function will return the minimum, average, and maximum temperatures for that range of dates.
+
 Complete the following steps:
 
 Use the calc_temps function to calculate the minimum, average, and maximum temperatures for your trip using the matching dates from a previous year (for example, use "2017-08-01").
@@ -103,7 +115,8 @@ Plot the minimum, average, and maximum temperature from your previous query as a
 Use "Trip Avg Temp" as the title.
 Use the average temperature as the bar height (y value).
 Use the peak-to-peak (TMAX-TMIN) value as the y error bar (YERR).
-![tripavgplot](https://user-images.githubusercontent.com/100816322/169883113-99a32733-47b4-4c2c-95c5-f1300d576341.png)
+
+  ![tripavgplot](https://user-images.githubusercontent.com/100816322/169883113-99a32733-47b4-4c2c-95c5-f1300d576341.png)
 
 Daily Rainfall Average
 We also need to know what the rainfal has been. The following steps were completed:
@@ -116,8 +129,9 @@ Daily Temperature Normals
 Calculate the daily normals for the duration of the trip. Normals are the averages for the minimum, average, and maximum temperatures.
 You are provided with a function called daily_normals that will calculate the daily normals for a specific date. This date string will be in the format %m-%d. Make sure to use all historic TOBS that match that date string.
 
-  Use Pandas to plot an area plot (stacked=False) for the daily normals, as shown in the following image:
-![trip_plot](https://user-images.githubusercontent.com/100816322/169883370-978a7961-c76b-47f6-a38c-198d33fef51e.png)
+Use Pandas to plot an area plot (stacked=False) for the daily normals, as shown in the following image:
+
+  ![trip_plot](https://user-images.githubusercontent.com/100816322/169883370-978a7961-c76b-47f6-a38c-198d33fef51e.png)
 
 References
 Menne, M.J., I. Durre, R.S. Vose, B.E. Gleason, and T.G. Houston, 2012: An overview of the Global Historical Climatology Network-Daily Database. Journal of Atmospheric and Oceanic Technology, 29, 897-910, https://doi.org/10.1175/JTECH-D-11-00103.1
