@@ -125,7 +125,7 @@ Calculate the rainfall per weather station using the previous year's matching da
 
 Sort this in descending order by precipitation amount, and list the station, name, latitude, longitude, and elevation.
 
-##3 Daily Temperature Normals
+### Daily Temperature Normals
 Calculate the daily normals for the duration of the trip. Normals are the averages for the minimum, average, and maximum temperatures.
 You are provided with a function called daily_normals that will calculate the daily normals for a specific date. This date string will be in the format %m-%d. Make sure to use all historic TOBS that match that date string.
 
